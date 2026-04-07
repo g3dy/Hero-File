@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HeroFile</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="page">
+ 
+  <header class="masthead">
+    <h1 class="masthead-title">HERO<br>FILE</h1>
+    <div class="masthead-badge">
+      <span class="issue">ISSUE #001</span>
+      <span class="tagline">Superhero Intelligence</span>
+    </div>
+  </header>
+ 
+  <div class="controls">
+    <div class="search-wrap">
+      <input id="searchInput" type="text" placeholder="START TYPING A HERO NAME…" autocomplete="off">
+      <div id="dropdown"></div>
+    </div>
+    <button id="randomHero" class="btn">⚄ RANDOM</button>
+  </div>
+ 
+  <!-- States -->
+  <div class="state-wrap" id="stateWrap">
+    <div class="empty-panel" id="stateEmpty">
+      <div class="big-icon">?!</div>
+      <p>Type a hero name or roll random</p>
+    </div>
+    <div class="loading-panel" id="stateLoading" style="display:none">
+      <div class="zap">⚡</div>
+      <div class="loading-label">LOADING…</div>
+    </div>
+    <div class="error-panel" id="stateError" style="display:none">
+      <div class="err-title">NOT FOUND!</div>
+      <p>No hero matched — try again.</p>
+    </div>
+  </div>
+ 
+  <!-- Hero Card -->
+  <div id="heroCard">
+    <div class="card-header">
+      <span class="card-series">HERO FILE — CLASSIFIED</span>
+      <span class="card-number" id="cardNumber">#???</span>
+    </div>
+    <div class="card-body">
+      <div class="card-photo">
+        <img id="heroImg" src="" alt="">
+        <div class="card-photo-name" id="heroName"></div>
+      </div>
+      <div class="card-info">
+        <div>
+          <div class="info-block-label">Alignment</div>
+          <div id="heroAlignment"></div>
+        </div>
+        <div>
+          <div class="info-block-label">Power Stats</div>
+          <div id="statsRows"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="footer-text">© Hero File Comics</span>
+      <span class="footer-logo">HF</span>
+    </div>
+  </div>
+ 
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
