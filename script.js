@@ -1,4 +1,3 @@
-
 const BASE_API = '2add14c8cd3aa77ba305561617a7beca'
 const BASE_URL = 'https://superheroapi.com/api.php/'
  
